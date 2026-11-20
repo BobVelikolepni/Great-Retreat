@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Great Retreat — Славная капитуляция</title>
+<meta name="description" content="Пошаговая тактика на гексах о войнах Руси и России.">
+<link rel="icon" href="assets/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Ruslan+Display&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#e8c872;--gold-d:#b8923f;--cream:#f1e6c8;--wine:#2a0e10;--wine-2:#3d1517;--ink:#140a0a;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#1b2740 url(assets/bg.webp);color:var(--cream);font:17px/1.7 "PT Serif",Georgia,serif}
+h1,h2,h3{font-family:"Ruslan Display","PT Serif",Georgia,serif;font-weight:400;color:var(--gold);line-height:1.15;margin:0 0 .5em}
+h2{font-size:clamp(1.9rem,5vw,2.6rem)}
+a{color:var(--gold)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.hero{position:relative;min-height:88vh;display:flex;align-items:flex-end;background:#000 url(assets/hero.jpg) center/cover;border-bottom:3px solid var(--gold-d)}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(20,10,10,.95) 8%,rgba(20,10,10,.55) 55%,rgba(20,10,10,.15))}
+.hero-in{position:relative;width:min(960px,100%);margin:0 auto;padding:0 22px 48px}
+.hero h1{font-size:clamp(2.8rem,11vw,6rem);margin:0;text-shadow:0 3px 14px #000}
+.hero .sub{font-size:clamp(1.2rem,3.4vw,1.7rem);font-family:"Ruslan Display",serif;margin:.1em 0 .6em}
+.hero p{max-width:34em;margin:0 0 1.4em}
+.btn{display:inline-block;padding:.75em 1.6em;background:var(--gold);color:var(--ink);font:400 1.35rem "Ruslan Display",serif;text-decoration:none;border:2px solid #fff3c4;border-radius:3px;box-shadow:0 0 0 3px var(--ink),0 0 0 5px var(--gold-d)}
+.btn:hover{background:#fff0b8}
+.page{width:min(960px,100% - 24px);margin:-1px auto 0;background:var(--wine);border:3px solid var(--gold-d);border-top:0;padding:8px clamp(18px,5vw,48px) 40px}
+section{padding:42px 0 6px}
+section+section{border-top:1px solid rgba(232,200,114,.28)}
+p{margin:0 0 1em;max-width:62ch}
+ul.f{padding-left:1.2em;max-width:62ch}ul.f li{margin-bottom:.5em}
+.shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:18px;margin-top:20px}
+.shots figure{margin:0}
+.shots button{display:block;width:100%;padding:0;border:2px solid var(--gold-d);background:var(--ink);cursor:zoom-in}
+.shots img{display:block;width:100%;height:auto}
+figcaption{font-size:.92rem;font-style:italic;padding-top:6px;opacity:.85}
+.duo{display:grid;grid-template-columns:minmax(150px,.8fr) 1.6fr;gap:clamp(18px,4vw,40px);align-items:center}
+.duo img{width:100%;height:auto;display:block}
+.portrait{border:3px solid var(--gold-d);outline:2px solid var(--ink);outline-offset:-8px;box-shadow:0 0 0 5px var(--wine-2)}
+.lord{max-height:420px;object-fit:contain;object-position:bottom}
+.steps{max-width:62ch;padding-left:1.3em}.steps li{margin-bottom:.6em}
+.dl{text-align:center;background:var(--wine-2);border:1px solid var(--gold-d);padding:34px 18px;margin:8px 0 28px}
+.dl p{margin-inline:auto}
+.dl .meta{font-size:.92rem;opacity:.8;margin:1em auto 0}
+footer{text-align:center;padding:22px;font-size:.9rem;opacity:.8}
+dialog{max-width:96vw;max-height:96vh;padding:0;border:2px solid var(--gold);background:var(--ink)}
+dialog img{display:block;max-width:96vw;max-height:92vh}
+dialog::backdrop{background:rgba(0,0,0,.85)}
+@media(max-width:560px){.duo{grid-template-columns:1fr}.lord{max-height:300px;margin:0 auto}.portrait{max-width:320px;margin:0 auto}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="hero-in">
+    <h1>Great Retreat</h1>
+    <div class="sub">Славная капитуляция</div>
+    <p>Пошаговая тактика на гексах: от битвы на Трубеже до Бородина. Ведите дружину, стрельцов и гренадёров, берегите фланги и вовремя отступайте.</p>
+    <a class="btn" href="#download">Скачать игру</a>
+  </div>
+</header>
+
+<main class="page">
+<section id="about">
+  <h2>Об игре</h2>
+  <p>Great Retreat — тактическая игра, в которой каждый отряд ходит по шестиугольным клеткам. Поле можно разглядывать в 2D или в 3D и вращать камерой.</p>
+  <ul class="f">
+    <li><b>Кампания «История России»</b> — семь глав: Древняя Русь, монголы и крестоносцы, Северная война, Отечественная война 1812 года.</li>
+    <li><b>Кастомный бой</b> против ИИ и <b>сетевая игра</b> с другом.</li>
+    <li><b>Редактор карт</b>: рисуйте рельеф, расставляйте отряды и делитесь картой коротким кодом.</li>
+    <li><b>Энциклопедия</b> войск и сражений.</li>
+    <li><b>«Дорога славы»</b>: за победы вы получаете монеты и медали, а на шкале ждут ордена, новые портреты и стикеры для чата.</li>
+  </ul>
+</section>
+
+<section id="screens">
+  <h2>Скриншоты</h2>
+  <div class="shots">
+    <figure><button type="button"><img src="assets/battle-druzhina.jpg" alt="Русская дружина с копьями и красными щитами в начале боя" loading="lazy"></button><figcaption>Русская дружина строится к бою на размокшей равнине</figcaption></figure>
+    <figure><button type="button"><img src="assets/battle-musketeers.jpg" alt="Шеренги мушкетёров в фиолетовых мундирах напротив конницы" loading="lazy"></button><figcaption>Гренадёры обстреливают тяжёлую конницу</figcaption></figure>
+    <figure><button type="button"><img src="assets/glory-road.jpg" alt="Шкала «Дорога славы» с наградами и портретами" loading="lazy"></button><figcaption>«Дорога славы»: награды за победы</figcaption></figure>
+    <figure><button type="button"><img src="assets/profile.jpg" alt="Экран статистики и профиля игрока" loading="lazy"></button><figcaption>Профиль игрока: звание, портрет и флаг</figcaption></figure>
+  </div>
+</section>
+
+<section id="lord">
+  <h2>Lord of Retreat</h2>
+  <div class="duo">
+    <img class="lord" src="assets/lord_pipe.webp" alt="Lord of Retreat в гусарском мундире с трубкой" loading="lazy">
+    <div>
+      <p>Наставник игрока и главный герой обучения. Он объясняет основы управления отрядами, ведёт первые бои и затем передаёт командование вам.</p>
+      <p>Его принцип прост: вовремя оставленная позиция сохраняет армию.</p>
+    </div>
+  </div>
+</section>
+
+<section id="download">
+  <div class="dl">
+    <h2>Скачать</h2>
+    <p>Игра бесплатная, работает на Windows. Установка не нужна.</p>
+    <a class="btn" href="https://drive.usercontent.google.com/download?id=1IvvHx80ejXgtwlW-q-1dCmJ7RZQ4XG1I&amp;export=download&amp;confirm=t" rel="noopener">Скачать Great Retreat</a>
+    <p class="meta">Great_Retreat.exe · Windows 64-bit · около 152 МБ</p>
+  </div>
+  <ol class="steps">
+    <li>Нажмите «Скачать»: загрузится файл <b>Great_Retreat.exe</b>.</li>
+    <li>Запустите его двойным щелчком. Распаковывать ничего не нужно.</li>
+    <li>Если Windows покажет синее окно «Система Windows защитила ваш компьютер», нажмите «Подробнее», затем «Выполнить в любом случае». Так бывает с любыми новыми играми без платной цифровой подписи.</li>
+  </ol>
+</section>
+</main>
+
+<footer>© 2026 Great Retreat. Игра сделана на Godot.</footer>
+
+<dialog id="zoom"><img alt=""></dialog>
+<script>
+(function(){
+  var d=document.getElementById('zoom'),img=d.querySelector('img');
+  document.querySelectorAll('.shots button').forEach(function(b){
+    b.addEventListener('click',function(){var s=b.querySelector('img');img.src=s.src;img.alt=s.alt;d.showModal()});});
+  d.addEventListener('click',function(){d.close()});
+})();
+</script>
+</body>
+</html>
